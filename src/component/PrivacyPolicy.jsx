@@ -7,7 +7,7 @@ function PrivacyPolicy() {
                 <Col>
                     <h1>Privacy Policy for eVoting Pakistan</h1>
 
-                    <p>At eVoting Pakistan, accessible from https://syed-bakhtawar-fahim.github.io/eVotingPakistan, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by eVoting Pakistan and how we use it.</p>
+                    <p>At eVoting Pakistan, accessible from https://evoting-pakistan.herokuapp.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by eVoting Pakistan and how we use it.</p>
 
                     <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 
@@ -60,7 +60,7 @@ function PrivacyPolicy() {
 
                     <h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
 
-                    <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+                    <p>Under the CCPA, among other rights, Pakistani consumers have the right to:</p>
                     <p>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
                     <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
                     <p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>

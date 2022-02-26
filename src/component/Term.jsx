@@ -9,7 +9,7 @@ function Term() {
 
                     <p>Welcome to eVoting Pakistan!</p>
 
-                    <p>These terms and conditions outline the rules and regulations for the use of eVoting Pakistan's Website, located at https://syed-bakhtawar-fahim.github.io/eVotingPakistan.</p>
+                    <p>These terms and conditions outline the rules and regulations for the use of eVoting Pakistan's Website, located at https://evoting-pakistan.herokuapp.com/.</p>
 
                     <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use eVoting Pakistan if you do not agree to take all of the terms and conditions stated on this page.</p>
 
