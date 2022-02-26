@@ -4,7 +4,7 @@ import axios from "axios";
 import './Contact.css'
 function Contact() {
 
-    const [Name, setName] = useState(0)
+    const [Name, setName] = useState("")
     const [Email, setEmail] = useState("")
     const [Message, setMessage] = useState("")
 
