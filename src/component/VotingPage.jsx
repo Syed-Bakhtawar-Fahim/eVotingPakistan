@@ -12,7 +12,8 @@ function VotingPage() {
     const [Problem, setProblem] = useState("")
     const [Area, setArea] = useState("")
     const [Message, setMessage] = useState("")
-    const URL = "http://localhost:4000"
+    // const URL = "http://localhost:4000"
+    const URL = "https://evoting-pakistan.herokuapp.com"
     let voteSuccess = false
 
     function submitVote(e) {

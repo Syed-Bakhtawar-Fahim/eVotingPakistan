@@ -7,10 +7,12 @@ function Contact() {
     const [Name, setName] = useState("")
     const [Email, setEmail] = useState("")
     const [Message, setMessage] = useState("")
+    // const URL = "http://localhost:4000"
+    const URL = "https://evoting-pakistan.herokuapp.com"
 
     function contact(e) {
         console.log(setName, setEmail, setMessage);
-        const submitContact = axios.post(`http://localhost:4000/contact`, { Name, Email, Message })
+        const submitContact = axios.post(`${URL}/contact`, { Name, Email, Message })
             .then((response) => {
                 console.log(response.data)
                 
