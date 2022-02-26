@@ -1,0 +1,33 @@
+.main-navbar
+{
+    background-color: #01411c;
+    
+}
+
+.NavUl
+{
+  margin: 0px 5px;
+  padding: 3px 15px;
+  text-decoration: none;
+  color: #FFF; 
+}
+.NavUl:hover
+{
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.navbar-brand
+{
+  font-size: 1.5rem;
+  color: #fff !important;
+}
+.navbar-brand:hover
+{
+    color: #fff !important;
+}
+.activePage
+{
+    font-weight: bold;
+    border-bottom: 1px solid #1C96C5;
+}

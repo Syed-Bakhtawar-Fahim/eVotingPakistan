@@ -1,0 +1,179 @@
+
+#header
+{
+    width: 100%;
+    /* height: 80vh; */
+    margin: 70px 0 !important;
+    /* margin: 70px 0; */
+}
+
+#header h1{
+    margin: 0 0 10px 0;
+    font-weight: 700px;
+    color: var(--green) ;
+    /* text-decoration: underline; */
+}
+
+#header h2
+{
+    color: #484848;
+    font-size: 24px;
+}
+.brand-name
+{
+    color: #1C96C5 !important;
+    /* background-color: #fff !important; */
+   
+}
+
+.box-shadow h1, .example
+{
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    padding: 5px;
+    border-radius: 8px;
+    color: var(--green) !important;
+    /* text-decoration: underline;  */
+}   
+   
+.example{
+    background-color: var(--green);   
+}
+.example h1{
+    color: var(--white) !important;
+}
+.header-img
+{
+    text-align: center;
+}
+
+.img-fluid
+{
+    height: 400px;
+    width: 400px;
+    margin: auto;
+   
+}
+.reverse-row
+{
+    display: flex;
+    flex-direction: row-reverse;
+    order: 1;
+}
+
+
+.problemCommon
+{
+    margin: 10px 0;
+}
+
+/* .changeOrder
+{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #484848;
+    
+} */
+
+#header:nth-of-type(even) {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: left;
+    align-self: left;
+}
+.img-fluid:nth-of-type(odd){
+    display: flex;
+    flex-direction: row-reverse;
+    /* background-color: #484848; */
+   
+}
+.header-img:nth-of-type(odd){
+    align-items: left;
+    flex-direction: row-reverse;
+}
+  .col-lg-6:nth-of-type(even){
+    flex-direction: row-reverse;
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px)
+{
+
+    .col-md-6{
+            width: 100%;
+    }
+    .img-fluid{
+       display: none;
+    }
+    #header{
+        margin-top: 0;
+        margin-bottom: 1px;
+    }
+}
+@media only screen and (max-width: 425px)
+{
+
+ #header h1{
+     font-size: 30px;
+ }   
+
+ #header h5{
+     font-size: 18px;
+ }
+ #header{
+    /* margin: 20px 0; */
+    margin-bottom: 30px;
+ }
+ .img-fluid
+{
+    height: px;
+   
+}
+}
+@media only screen and (max-width: 320px)
+{
+
+ #header h1{
+     font-size: 20px;
+     text-align: center;
+ }   
+
+ #header h5{
+     font-size: 14px;
+ }
+ #header{
+     margin-bottom: 1px;
+     margin-top: 0%;
+ }
+
+}
+
+@media only screen and (max-width: 1024px)
+{
+
+ #header{
+     margin-bottom: 60px;
+ }
+
+}

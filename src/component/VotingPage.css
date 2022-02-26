@@ -1,0 +1,12 @@
+#voting h1{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+#voting label{
+    text-align: start;
+    margin-left: 10px;
+    font-weight: 600;
+    color: var(--green);
+}

@@ -1,0 +1,32 @@
+#table h1{
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--green);
+    margin: 30px;
+}
+.table-heading{
+    
+    color: var(--white) !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+    background-color: var(--green) !important;
+}
+.table-margin{
+    margin: 30px;
+}
+.pre-loader{
+    /* display: flex; */
+    margin: 30px auto;
+    justify-content: center;
+    text-align: center;
+}
+.pre-loader h3{
+   font-size: 1.3rem;
+   color: var(--green); 
+   font-weight: bold;
+}
+/* .pre-loader img{
+    text-align: center;
+   
+} */
+
