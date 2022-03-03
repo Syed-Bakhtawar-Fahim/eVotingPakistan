@@ -11,7 +11,7 @@ function PrivacyPolicy() {
 
                     <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
 
-                    <p>This project is created as a University Semester Project By Syed Bakhtawar Fahim  <a href="https://github.com/Syed-Bakhtawar-Fahim">Contact Me</a></p>
+                    
                    
                     <h2>Consent</h2>
 
