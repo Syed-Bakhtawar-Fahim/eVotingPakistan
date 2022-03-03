@@ -13,7 +13,7 @@ function Contact() {
     function contact(e) {
         console.log(setName, setEmail, setMessage);
         if(name==='' || email ==='' || message===''){
-            alert("Fill the form ")
+            alert("Please fill the form correctly")
         }
         else{
             const submitContact = axios.post(`${URL}/contact`, { name, email, message })
