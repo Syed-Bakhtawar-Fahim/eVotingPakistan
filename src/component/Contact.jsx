@@ -8,7 +8,7 @@ function Contact() {
     const [Email, setEmail] = useState("")
     const [Message, setMessage] = useState("")
     // const URL = "http://localhost:4000"
-    const URL = "https://evoting-pakistan.herokuapp.com"
+    const URL = "https://evoting-pakistan-server.herokuapp.com"
 
     function contact(e) {
         console.log(setName, setEmail, setMessage);

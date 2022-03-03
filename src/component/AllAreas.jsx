@@ -5,7 +5,7 @@ import axios from "axios";
 
 function AllAreas() {
     // const URL = "http://localhost:4000"
-    const URL = "https://evoting-pakistan.herokuapp.com"
+    const URL = "https://evoting-pakistan-server.herokuapp.com"
     const [data, setData] = useState([])
     // const [AreaName, setAreaName] = useState("")
     // const [AreaStatus, setAreaStatus] = useState("")

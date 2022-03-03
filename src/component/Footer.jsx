@@ -28,12 +28,13 @@ function Footer() {
                     <Link to="TermAndConditions" className='link'>Terms And Conditions</Link>
                     <a href='https://github.com/Syed-Bakhtawar-Fahim' className='link'>Developer Contact</a>
                 </div>
+                {/* <div>
+                    <h1 className="credit"> Created By <span>Syed Bakhtawar Fahim</span> | All rights reserved! </h1>
+                </div> */}
 
             </div>
 
-            <div>
-                <h1 className="credit"> Created By <span>Syed Bakhtawar Fahim</span> | All rights reserved! </h1>
-            </div>
+
 
         </section>
     )

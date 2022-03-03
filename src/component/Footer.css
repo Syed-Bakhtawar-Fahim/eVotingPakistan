@@ -1,28 +1,31 @@
-.footer{
+.footer {
     background: var(--green);
 }
-.footer .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 1rem;
 }
 
-.footer .box-container .box{
+.footer .box-container .box {
     padding: 2.6rem;
     flex: 1 1rem;
 }
 
-.footer .box-container .box h3{
+.footer .box-container .box h3 {
     font-size: 1.7rem;
     padding: .5rem 0;
     color: #fff;
 }
-.footer .box-container .box p{
+
+.footer .box-container .box p {
     font-size: 1rem;
     padding: .7rem 0;
     color: #eee;
 }
-.link{
+
+.link {
     display: flex;
     font-size: 1rem;
     padding: .1rem 0;
@@ -30,12 +33,14 @@
     cursor: pointer;
     text-decoration: none;
 }
-.link:hover{
+
+.link:hover {
     font-weight: bold;
     text-decoration: underline;
     color: var(--white);
 }
-.footer .credit{
+
+.footer .credit {
     text-align: center;
     padding: 1rem;
     margin-left: 1rem;
@@ -43,12 +48,19 @@
     font-size: 1rem;
     font-weight: normal;
     color: #fff;
-    border-top: .1rem solid rgba(255,255,255,.2);
+    border-top: .1rem solid rgba(255, 255, 255, .2);
 }
 
-.footer .credit span{
+.footer .credit span {
     color: var(--white);
     font-weight: bold;
     margin: 0 5px;
     font-size: 1rem;
+}
+
+
+@media screen and (max-width:425px) {
+    .footer .box-container{
+        flex-wrap: wrap;
+    }
 }
