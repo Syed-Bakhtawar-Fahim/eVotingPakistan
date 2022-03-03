@@ -6,34 +6,45 @@ import './VotingPage.css'
 
 function VotingPage() {
 
-    const [CNIC, setCNIC] = useState("")
-    const [Name, setName] = useState("")
-    const [Email, setEmail] = useState("")
-    const [Problem, setProblem] = useState("")
-    const [Area, setArea] = useState("")
-    const [Message, setMessage] = useState("")
+    const [cnic, setCNIC] = useState("")
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [problem, setProblem] = useState("")
+    const [area, setArea] = useState("")
+    const [message, setMessage] = useState("")
     // const URL = "http://localhost:4000"
     const URL = "https://evoting-pakistan-server.herokuapp.com"
-    let voteSuccess = false
 
     function submitVote(e) {
-        console.log(setName, setEmail, setMessage);
-        const submitForm = axios.post(`${URL}/vote`, { CNIC, Name, Email, Area, Problem, Message })
-            .then((response) => {
-                console.log(response.data)
-                setCNIC("")
-                setName((""))
-                setEmail("")
-                setProblem("")
-                setArea("")
-                setMessage("")
-            })
+        // console.log(setName, setEmail, setMessage);
+        if (cnic === '' || name === '' || email === '' || problem === '' || area === '' || message === '') {
+            alert("Please fill the form correctly.")
+        }
+        else {
+            const submitForm = axios.post(`${URL}/vote`, { cnic, name, email, area, problem, message })
+                .then((response) => {
+                    console.log(response.data)
+                    setCNIC("")
+                    setName((""))
+                    setEmail("")
+                    setProblem("")
+                    setArea("")
+                    setMessage("")
+                })
 
-            .catch(e => {
-                console.log('Error due to ' + e)
-            })
+                .catch(e => {
+                    console.log('Error due to ' + e)
+                })
 
-        if (submitForm) return alert('Your Vote has been Submitted')
+            if (submitForm)
+            {
+                alert('Your Vote has been Submitted')
+            }
+            else
+            {
+                alert("Something Went Wrong. Please try again later")
+            }
+        }
     }
     return (
         <React.Fragment>
@@ -47,15 +58,15 @@ function VotingPage() {
                                 <div className='col-md-6 col-ml-12 pt-5 pt-lg-5 order-2 order-lg-1 margin-set contact-box-shodow'>
                                     <h1>Your Vote</h1>
                                     <div className='form '>
-                                        <input type="number" value={CNIC} onChange={(e) => { setCNIC(e.target.value) }}
-                                            name='CNIC' placeholder="Enter Your CNIC Number 41021 - 999-4242-9" className="input-form" required/>
-                                        <input type="text" value={Name} onChange={(e) => { setName(e.target.value) }}
-                                            name='Name' placeholder="Enter Your Name" className="input-form" />
+                                        <input type="number" value={cnic} onChange={(e) => { setCNIC(e.target.value) }}
+                                            name='cnic' placeholder="Enter Your CNIC Number 41021 - 999-4242-9" className="input-form" required />
+                                        <input type="text" value={name} onChange={(e) => { setName(e.target.value) }}
+                                            name='name' placeholder="Enter Your Name" className="input-form" />
 
-                                        <input type="email" value={Email} onChange={(e) => { setEmail(e.target.value) }}
-                                            name='Email' placeholder="Enter Your Email" className="input-form" />
+                                        <input type="email" value={email} onChange={(e) => { setEmail(e.target.value) }}
+                                            name='email' placeholder="Enter Your Email" className="input-form" />
                                         <label className="label">Choose your area from the list</label>
-                                        <input list="browsers" name="browser" id="browser" placeholder="Choose your area from the list" value={Area} onChange={(e) => { setArea(e.target.value) }} />
+                                        <input list="browsers" name="browser" id="browser" placeholder="Choose your area from the list" value={area} onChange={(e) => { setArea(e.target.value) }} />
 
                                         <datalist id="browsers"   >
                                             <option value="North-Karachi" />
@@ -71,7 +82,7 @@ function VotingPage() {
                                         </datalist>
 
                                         <label className="label">Problem your're facing</label>
-                                        <input list="problems" name="problem" id="problem" placeholder="Problem your're facing" value={Problem} onChange={(e) => { setProblem(e.target.value) }} />
+                                        <input list="problems" name="problem" id="problem" placeholder="Problem your're facing" value={problem} onChange={(e) => { setProblem(e.target.value) }} />
 
                                         <datalist id="problems"  >
                                             <option value="Street Crime" />
@@ -80,8 +91,8 @@ function VotingPage() {
                                             <option value="Road Traffic Accident" />
                                             <option value="Broken Road" />
                                         </datalist>
-                                        <textarea type='text' value={Message} onChange={(e) => { setMessage(e.target.value) }}
-                                            name='Message' placeholder="Describe your problem here" className="input-form" />
+                                        <textarea type='text' value={message} onChange={(e) => { setMessage(e.target.value) }}
+                                            name='message' placeholder="Describe your problem here" className="input-form" />
                                         <div className="btn-contact">
                                             <button className='own-btn-get-started contact-btn' type='button' onClick={submitVote}>Vote</button>
                                         </div>

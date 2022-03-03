@@ -4,31 +4,39 @@ import axios from "axios";
 import './Contact.css'
 function Contact() {
 
-    const [Name, setName] = useState("")
-    const [Email, setEmail] = useState("")
-    const [Message, setMessage] = useState("")
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
     // const URL = "http://localhost:4000"
     const URL = "https://evoting-pakistan-server.herokuapp.com"
 
     function contact(e) {
         console.log(setName, setEmail, setMessage);
-        const submitContact = axios.post(`${URL}/contact`, { Name, Email, Message })
+        if(name==='' || email ==='' || message===''){
+            alert("Fill the form ")
+        }
+        else{
+            const submitContact = axios.post(`${URL}/contact`, { name, email, message })
             .then((response) => {
                 console.log(response.data)
                 
                 setName("");
                 setEmail("");
                 setMessage("");
-                if(setName.length < 0) return alert("Please fill the form")
             })
             .catch(e => {
                 console.log('Error due to ' + e)
             })
 
+            if(submitContact) {
+                alert("Thank you for your message. We'll get in touch with you very soon") 
+            }else{
+                alert("Error! please try again later")
+            
+            }
+            
 
-            if(submitContact) return alert("Thank you for your message. We'll get in touch with you very soon")
-
-           
+        }           
     }
     return (
         <React.Fragment>
@@ -40,12 +48,12 @@ function Contact() {
                                 <div className='col-md-6 col-ml-12 pt-5 pt-lg-5 order-2 order-lg-1 margin-set contact-box-shodow'>
                                     <h1>Touch With Us</h1>
                                     <div className='form '>
-                                        <input type="text" value={Name} onChange={(e) => { setName(e.target.value) }}
-                                            name='Name' placeholder="Enter Your Name" className="input-form" required/>
-                                        <input type="email" value={Email} onChange={(e) => { setEmail(e.target.value) }}
-                                            name='Email' placeholder="Enter Your Email" className="input-form" required/>
-                                        <textarea type='text' value={Message} onChange={(e) => { setMessage(e.target.value) }}
-                                            name='Message' placeholder="Enter Your Message" className="input-form" required/>
+                                        <input type="text" value={name} onChange={(e) => { setName(e.target.value) }}
+                                            name='name' placeholder="Enter Your Name" className="input-form" required/>
+                                        <input type="email" value={email} onChange={(e) => { setEmail(e.target.value) }}
+                                            name='email' placeholder="Enter Your Email" className="input-form" required/>
+                                        <textarea type='text' value={message} onChange={(e) => { setMessage(e.target.value) }}
+                                            name='message' placeholder="Enter Your Message" className="input-form" required/>
                                         <div className="btn-contact">
                                             <button className='own-btn-get-started contact-btn' type='button' onClick={contact}>Submit</button>
                                         </div>
