@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Alert, Button } from 'react-bootstrap'
+import React, { useState} from "react";
 import axios from "axios";
 import './Contact.css'
 import './VotingPage.css'

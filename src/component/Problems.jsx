@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './Problems.css'
 import './Home.css'
-import { Link } from 'react-router-dom'
-import Common from "./Common";
 import AllProblems from './AllProblems'
 import Change from "./Change";
-import axios from 'axios'
 
 function Problems() {
     return (

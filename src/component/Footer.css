@@ -59,7 +59,7 @@
 }
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:768px) {
     .footer .box-container{
         flex-wrap: wrap;
     }

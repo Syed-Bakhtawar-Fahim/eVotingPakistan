@@ -20,6 +20,7 @@
     justify-content: center;
     text-align: center;
 }
+
 .pre-loader h3{
    font-size: 1.3rem;
    color: var(--green); 

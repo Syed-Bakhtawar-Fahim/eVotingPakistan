@@ -3,7 +3,6 @@ import './Problems.css'
 import './Home.css'
 import { Link } from 'react-router-dom'
 import './Change.css'
-import {Container, Row, Col} from 'react-bootstrap'
 
 
 function Change(props) {
