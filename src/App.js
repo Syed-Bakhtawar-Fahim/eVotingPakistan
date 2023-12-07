@@ -1,6 +1,7 @@
 import './App.css';
 import './index.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 import Home from './component/Home';
@@ -13,12 +14,15 @@ import VotingPage from './component/VotingPage';
 import Footer from './component/Footer'
 import PrivacyPolicy from './component/PrivacyPolicy'
 import Term from './component/Term'
+import { ToastContainer } from 'react-toastify';
+
 
 
 
 function App() {
   return (
     <React.Fragment>
+      <ToastContainer />
       <AppNavbar />
       <Routes>
         <Route path='/' element={<Home />} />

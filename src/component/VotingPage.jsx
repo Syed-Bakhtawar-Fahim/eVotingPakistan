@@ -1,5 +1,6 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import { toast } from 'react-toastify';
 import './Contact.css'
 import './VotingPage.css'
 
@@ -17,11 +18,22 @@ function VotingPage() {
     function submitVote(e) {
         // console.log(setName, setEmail, setMessage);
         if (cnic === '' || name === '' || email === '' || problem === '' || area === '' || message === '') {
-            alert("Please fill the form correctly.")
+            toast.success("Your Vote has been submitted", {
+                position: toast.POSITION.BOTTOM_LEFT,
+            });
+            setCNIC("")
+            setName((""))
+            setEmail("")
+            setProblem("")
+            setArea("")
+            setMessage("")
         }
         else {
             const submitForm = axios.post(`${URL}/vote`, { cnic, name, email, area, problem, message })
                 .then((response) => {
+                    toast.error("Something went wrong..", {
+                        position: toast.POSITION.BOTTOM_LEFT,
+                    });
                     console.log(response.data)
                     setCNIC("")
                     setName((""))
@@ -35,12 +47,10 @@ function VotingPage() {
                     console.log('Error due to ' + e)
                 })
 
-            if (submitForm)
-            {
+            if (submitForm) {
                 alert('Your Vote has been Submitted')
             }
-            else
-            {
+            else {
                 alert("Something Went Wrong. Please try again later")
             }
         }

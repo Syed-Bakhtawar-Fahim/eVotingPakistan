@@ -4,7 +4,7 @@ import morgan from "morgan";
 import mongoose from 'mongoose';
 import axios from 'axios'
 import cors from "cors";
-
+const serverless = require("serverless-http")
 
 // Generate App and Morgan to use
 const app = express()
@@ -226,6 +226,24 @@ app.get('/home', (req, res) => {
 app.get('*', (req, res) => {
     res.send('Hi I am the Server Of eVoting Pakistan developed by Syed Bakhtawar Fahim')
 })
-app.listen(PORT, () => {
-    console.log(`The Server Of eVoting Pakistan developed by Syed Bakhtawar Fahim listening at http://localhost:${PORT}`)
-})
+
+
+app.use("/.netlify/functions/server/votes");
+app.use("/.netlify/functions/server/vote");
+app.use("/.netlify/functions/server/contacts");
+app.use("/.netlify/functions/server/contact");
+app.use("/.netlify/functions/server/problems");
+app.use("/.netlify/functions/server/problem");
+app.use("/.netlify/functions/server/allareas");
+app.use("/.netlify/functions/server/allarea");
+
+
+// app.listen(PORT, () => {
+//     console.log(`The Server Of eVoting Pakistan developed by Syed Bakhtawar Fahim listening at http://localhost:${PORT}`)
+// })
+
+server.close(() => {
+    process.exit(1);
+  });
+
+module.exports.handler = serverless(server)
