@@ -1,0 +1,29 @@
+ // const [AreaName, setAreaName] = useState("")
+    // const [AreaStatus, setAreaStatus] = useState("")
+    // const [DistrictPopulation, setDistrictPopulation] = useState("")
+
+    // function saveUser() {
+    //     console.log(AreaName, AreaStatus, DistrictPopulation);
+    //     axios.post(`http://localhost:4000/allarea`, { AreaName, AreaStatus, DistrictPopulation })
+    //         .then((response) => {
+    //             console.log(response)
+    //         })
+    //         .catch(e => {
+    //             console.log('Error due to ' + e)
+    //         })
+    // }
+
+
+    
+
+
+
+
+
+            {/* <input type="text" value={AreaName} onChange={(e) => { setAreaName(e.target.value) }}
+                name='AreaName' /> <br /> <br />
+            <input type="text" value={AreaStatus} onChange={(e) => { setAreaStatus(e.target.value) }}
+                name='AreaStatus' /> <br /> <br />
+            <input type="text" value={DistrictPopulation} onChange={(e) => { setDistrictPopulation(e.target.value) }}
+                name='DistrictPopulation' /> <br /> <br />
+            <button type='button' onClick={saveUser}>Create New User</button> */}

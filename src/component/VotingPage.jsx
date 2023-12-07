@@ -12,14 +12,14 @@ function VotingPage() {
     const [problem, setProblem] = useState("")
     const [area, setArea] = useState("")
     const [message, setMessage] = useState("")
-    // const URL = "http://localhost:4000"
-    const URL = "https://evoting-pakistan-server.herokuapp.com"
+    const URL = "https://evotingpakistanserver.netlify.app/.netlify/functions/server"
+
 
     function submitVote(e) {
         // console.log(setName, setEmail, setMessage);
         if (cnic === '' || name === '' || email === '' || problem === '' || area === '' || message === '') {
-            toast.success("Your Vote has been submitted", {
-                position: toast.POSITION.BOTTOM_LEFT,
+            toast.warning("Please fill the form correctly", {
+                position: toast.POSITION.TOP_LEFT,
             });
             setCNIC("")
             setName((""))
@@ -29,12 +29,12 @@ function VotingPage() {
             setMessage("")
         }
         else {
-            const submitForm = axios.post(`${URL}/vote`, { cnic, name, email, area, problem, message })
+            const submitForm = axios.post(`${URL}/add-vote`, { cnic, name, email, area, problem, message })
                 .then((response) => {
-                    toast.error("Something went wrong..", {
-                        position: toast.POSITION.BOTTOM_LEFT,
+                    toast.success("Thank you for your vote.", {
+                        position: toast.POSITION.TOP_LEFT,
                     });
-                    console.log(response.data)
+                    // console.log(response.data)
                     setCNIC("")
                     setName((""))
                     setEmail("")
@@ -48,10 +48,14 @@ function VotingPage() {
                 })
 
             if (submitForm) {
-                alert('Your Vote has been Submitted')
+                toast.success("Thank you for your vote.", {
+                    position: toast.POSITION.TOP_LEFT,
+                });
             }
             else {
-                alert("Something Went Wrong. Please try again later")
+                toast.error("Something went wrong, try later", {
+                    position: toast.POSITION.TOP_LEFT,
+                });
             }
         }
     }

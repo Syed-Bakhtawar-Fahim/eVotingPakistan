@@ -4,29 +4,13 @@ import './AllAreas.css'
 import axios from "axios";
 
 function AllAreas() {
-    // const URL = "http://localhost:4000"
-    const URL = "https://evoting-pakistan-server.herokuapp.com"
+    const URL = "https://evotingpakistanserver.netlify.app/.netlify/functions/server"
     const [data, setData] = useState([])
-    // const [AreaName, setAreaName] = useState("")
-    // const [AreaStatus, setAreaStatus] = useState("")
-    // const [DistrictPopulation, setDistrictPopulation] = useState("")
-
-    // function saveUser() {
-    //     console.log(AreaName, AreaStatus, DistrictPopulation);
-    //     axios.post(`http://localhost:4000/allarea`, { AreaName, AreaStatus, DistrictPopulation })
-    //         .then((response) => {
-    //             console.log(response)
-    //         })
-    //         .catch(e => {
-    //             console.log('Error due to ' + e)
-    //         })
-    // }
-
     useEffect(() => {
-        axios.get(`${URL}/allareas`)
+        axios.get(`${URL}/all-areas`)
             .then((response) => {
-                console.log('Response', response.data)
-                setData(response.data)
+                // console.log('Response', response.data.areas)
+                setData(response.data.areas)
             })
             .catch(e => {
                 console.log('Something Wrond due to this', e)
@@ -73,23 +57,9 @@ function AllAreas() {
             </Container>
 
 
-
-
-
-
-
-            {/* <input type="text" value={AreaName} onChange={(e) => { setAreaName(e.target.value) }}
-                name='AreaName' /> <br /> <br />
-            <input type="text" value={AreaStatus} onChange={(e) => { setAreaStatus(e.target.value) }}
-                name='AreaStatus' /> <br /> <br />
-            <input type="text" value={DistrictPopulation} onChange={(e) => { setDistrictPopulation(e.target.value) }}
-                name='DistrictPopulation' /> <br /> <br />
-            <button type='button' onClick={saveUser}>Create New User</button> */}
         </section>
     )
 }
 
 export default AllAreas
-
-// className="table-set"
 // https://www.citypopulation.de/en/pakistan/karachi/admin/

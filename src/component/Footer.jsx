@@ -27,9 +27,9 @@ function Footer() {
                     <Link to="PrivacyPolicy" className='link'>Privacy Policy</Link>
                     <Link to="TermAndConditions" className='link'>Terms And Conditions</Link>
                 </div>
-                {/* <div>
+                <div>
                     <h1 className="credit"> Created By <span>Syed Bakhtawar Fahim</span> | All rights reserved! </h1>
-                </div> */}
+                </div>
 
             </div>
 

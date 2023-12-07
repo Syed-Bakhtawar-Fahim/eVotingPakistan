@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './Contact.css'
+import { toast } from 'react-toastify';
 
 
 function Contact() {
@@ -8,17 +9,21 @@ function Contact() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
-    const URL = "https://evoting-pakistan-server.herokuapp.com"
-
+    const URL = "https://evotingpakistanserver.netlify.app/.netlify/functions/server"
     function contact(e) {
         console.log(setName, setEmail, setMessage);
         if (name === '' || email === '' || message === '') {
-            alert("Please fill the form correctly")
+            toast.warning("Please fill the form correctly", {
+                position: toast.POSITION.TOP_LEFT,
+            });
         }
         else {
-            const submitContact = axios.post(`${URL}/contact`, { name, email, message })
+            const submitContact = axios.post(`${URL}/add-contact`, { name, email, message })
                 .then((response) => {
-                    console.log(response.data)
+                    // console.log(response.data)
+                    toast.success("Thank you for contacting us.", {
+                        position: toast.POSITION.TOP_LEFT,
+                    });
 
                     setName("");
                     setEmail("");
@@ -26,12 +31,20 @@ function Contact() {
                 })
                 .catch(e => {
                     console.log('Error due to ' + e)
+                    toast.error("Something went wrong, try later", {
+                        position: toast.POSITION.TOP_LEFT,
+                    });
                 })
 
             if (submitContact) {
-                alert("Thank you for your message. We'll get in touch with you very soon")
+                toast.success("Thank you for contacting us.", {
+                    position: toast.POSITION.BOTTOM_LEFT,
+                });
             } else {
                 alert("Error! please try again later")
+                toast.error("Something went wrong, try later", {
+                    position: toast.POSITION.TOP_LEFT,
+                });
 
             }
 

@@ -20,6 +20,7 @@ import { ToastContainer } from 'react-toastify';
 
 
 function App() {
+  window.addEventListener("contextmenu", (e) => e.preventDefault())
   return (
     <React.Fragment>
       <ToastContainer />
