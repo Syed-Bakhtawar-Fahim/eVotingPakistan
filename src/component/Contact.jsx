@@ -21,10 +21,6 @@ function Contact() {
             const submitContact = axios.post(`${URL}/add-contact`, { name, email, message })
                 .then((response) => {
                     // console.log(response.data)
-                    toast.success("Thank you for contacting us.", {
-                        position: toast.POSITION.TOP_LEFT,
-                    });
-
                     setName("");
                     setEmail("");
                     setMessage("");
@@ -47,12 +43,7 @@ function Contact() {
                 });
 
             }
-
-
         }
-
-
-
 
     }
 

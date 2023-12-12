@@ -17,8 +17,6 @@ function AllProblems(props) {
                                 </div>
                                 <h5 className='my-3'>
                                     {props.protext}
-
-
                                 </h5>
                                 <div className='mt-3'>
                                     <Link to= {props.provisit} className='own-btn-get-started'>{props.proBtn}</Link>

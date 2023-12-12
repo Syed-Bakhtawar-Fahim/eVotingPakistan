@@ -31,9 +31,6 @@ function VotingPage() {
         else {
             const submitForm = axios.post(`${URL}/add-vote`, { cnic, name, email, area, problem, message })
                 .then((response) => {
-                    toast.success("Thank you for your vote.", {
-                        position: toast.POSITION.TOP_LEFT,
-                    });
                     // console.log(response.data)
                     setCNIC("")
                     setName((""))
